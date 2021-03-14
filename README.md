@@ -4,7 +4,7 @@
 201 VMs were placed on 201 different subnets (10.0.x.0/24, where
 x=1..201).  Each of the first 200 VMs generated one HTTP request every
 2 seconds.  These requests were served by a HTTP server running in
-the subnet at http://10.0.201.1.  The file http-from-200-subnets.pcap.gz
+the subnet at http://10.0.201.1.  The file `http-from-200-subnets.pcap.gz`
 contains 60 seconds of packet data captured on the interface of the
 HTTP server VM that connected to the router.  All 201 VMs and router
 were deployed from LiquidMetal template.
