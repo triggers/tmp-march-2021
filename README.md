@@ -28,9 +28,9 @@ The following steps can be used to repeat the data capture:
      - Note: like before, the browser may become unresponsive for many
        minutes.  Please wait until it becomes responsive again.
 
-  4. It is possible to capture pcap data using the LiquidMetal GUI,
-     however because of new feature development.  However, for this
-     particular demo, it is currently better to capture pcap data from
+  4. It is possible to capture pcap data using the LiquidMetal GUI.
+     However, because of new feature development, for this
+     particular demo it is currently better to capture pcap data from
      the command line.  As a first step, right click on the ROUTER
      icon and select the console feature.
 
@@ -63,3 +63,37 @@ randomly selected virtual machine.  Each cluster was deployed
 one-at-a-time to a LiquidMetal environment from a template.  After
 pcap data was collected, the environment was destroyed before
 deploying the next template.
+
+The following steps can be used to repeat the data capture for one of
+the pcap files:
+
+  1. Launch one of the templates with a name like "subnet-003" into
+     the LiquidMetal editor
+
+  2. Click once on the `DEPLOY` button.  Choose a name like
+     `cluster-test` when the `Deployments` dialog appears.
+     - Note: deploying the 250 cluster nodes will take about 2 minutes.
+
+  3. After the `LIVE` menu becomes active, select from the menu the name that you typed in.
+
+  4. For pcap data capture on a cluster, the LiquidMetal GUI can be
+     used.  Right click on the ROUTER icon and select the `Packet Capture`
+     feature.
+
+  5. On the "Packet Request" dialog, select `eth0` as the "Interface
+     to Read"
+
+  6. To capture 60 seconds of pcap data, enter `0` for the "# of Pkts"
+     and `60000` for "Time Limit (ms)".  Also select the "File Only"
+     checkbox to prevent the thousands of packets from trying to
+     deplay in the UI.
+
+  7. To start the capture, click on the `CAPTURE PACKETS` button.  The
+     UI will animate while the capture is taking place.
+
+  8. After a little more than 60 seconds, the animation should stop
+     and a new dowload button will appear.  Click on this button and
+     the new pcap file will download.
+
+  9. When finished, destroy the environment by clicking on the `DESTROY` button.
+
