@@ -19,7 +19,7 @@ The following steps can be used to repeat the data capture:
 
   2. After the editor shows the 201 VMs (on different subnets) and the
      router and becomes responsive, click once on the `DEPLOY` button.
-     Choose a name like `router-test` when the `Deployments` dialog
+     Type in a name like `router-test` when the `Deployments` dialog
      appears.
      - Note: deploying the 201 components will take about 2 minutes.
 
@@ -58,7 +58,7 @@ contains 60 seconds of pcap packet data from a different cluster of
 10.0.1.0/24 subnet, the second cluster on the 10.0.2.0/24 subnet, and
 so forth. Each virtual machine sent TCP requests once per second to
 another randomly selected virtual machine in the cluster.  Also once
-per second, each virtual machine sent one IMCP ping request to a
+per second, each virtual machine sent one ICMP ping request to a
 randomly selected virtual machine.  Each cluster was deployed
 one-at-a-time to a LiquidMetal environment from a template.  After
 pcap data was collected, the environment was destroyed before
@@ -70,7 +70,7 @@ the pcap files:
   1. Launch one of the templates with a name like "subnet-003" into
      the LiquidMetal editor
 
-  2. Click once on the `DEPLOY` button.  Choose a name like
+  2. Click once on the `DEPLOY` button.  Type in a name like
      `cluster-test` when the `Deployments` dialog appears.
      - Note: deploying the 250 cluster nodes will take about 2 minutes.
 
@@ -86,14 +86,15 @@ the pcap files:
   6. To capture 60 seconds of pcap data, enter `0` for the "# of Pkts"
      and `60000` for "Time Limit (ms)".  Also select the "File Only"
      checkbox to prevent the thousands of packets from trying to
-     deplay in the UI.
+     display in the UI.
 
   7. To start the capture, click on the `CAPTURE PACKETS` button.  The
      UI will animate while the capture is taking place.
 
   8. After a little more than 60 seconds, the animation should stop
-     and a new dowload button will appear.  Click on this button and
-     the new pcap file will download.
+     and a new download button will appear as a cloud icon with a
+     downward pointing arrow.  Click on this button and the new pcap
+     file will download.
 
   9. When finished, destroy the environment by clicking on the `DESTROY` button.
 
